@@ -1136,7 +1136,7 @@ button.close {
 }
 .panel-heading .action-remove {
   font-size: 16px;
-  margin-top: -7px;
+  margin-top: 2px;
   color: #D54C48;
 }
 .preset_select {
@@ -1218,9 +1218,6 @@ button.close {
 .xa-style1 .panel-default > .panel-heading {
   background: #EFF0F4;
 }
-.xa-style2 {
-  -webkit-box-shadow: 0px 7px 10px -10px #bfc0c4;
-}
 .xa-style2 .panel {
   margin: 0 !important;
   border: 0;
@@ -1248,6 +1245,9 @@ button.close {
 }
 .xa-style2 .panel-default > .panel-heading {
   background: #FFFFFF;
+  border-top: 2px solid #eee;
+  border-right: 2px solid #eee;
+  border-left: 2px solid #eee;
 }
 .xa-style2 .panel-default > .panel-heading:first-child {
   border-top: 1px solid #eee;
