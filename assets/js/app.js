@@ -86,18 +86,20 @@
         });
     });
 
-// $(document).on('change', '.preset_select', function(){		
+// Preset Style 
 
-// 	var newIcon = $('#repeatable').attr('class');
-// 	var newIconChange = $(this).val();
+$(document).on('change', '.presets', function(){		
+  
+	var newIcon = $('#repeatable').attr('class');
+	var newIconChange = $(this).val();
 
-// 	if(newIcon!==newIconChange){
+	if(newIcon!==newIconChange){
 
-// 	$(this).next('#repeatable').removeClass(newIcon);
-// 	$(this).next('#repeatable').addClass('panel-group ui-sortable ' + newIconChange);
-// 	}
+	$(this).next('#repeatable').removeClass(newIcon);
+	$(this).next('#repeatable').addClass('panel-group ui-sortable ' + newIconChange);
+	}
 
-// });
+});
 //___Admin Style Change___//
 
 
