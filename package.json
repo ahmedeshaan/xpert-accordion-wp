@@ -19,14 +19,16 @@
       "url": ""
     }
   ],
-
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-concat": "^2.3.4",
     "gulp-header": "^1.0.5",
     "gulp-ignore": "^1.2.0",
     "gulp-less": "latest",
+    "gulp-livereload": "latest",
+    "gulp-plumber": "latest",
     "gulp-minify-css": "^0.3.7",
+    "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.4.0",
     "gulp-tap": "latest",
@@ -34,7 +36,6 @@
     "gulp-util": "latest",
     "gulp-watch": "^0.6.9",
     "gulp-zip": "^2.0.2",
-    "gulp-livereload": "latest",
     "mkdirp": "latest",
     "run-sequence": "^0.3.6"
   },

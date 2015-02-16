@@ -222,4 +222,25 @@
   color: @button-danger-active-color;
 }
 
+// Drag and Drop Handleer
 
+.panel-heading  .tx_draging {
+  position: relative;
+  left: -2px;
+  padding-right: 10px;
+  cursor: move;
+  border-right: 1px solid #000;
+}
+.panel-heading  .tx_draging + i {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.panel-heading  .action-remove {
+  font-size: 16px;
+  margin-top: -7px;
+  color: #D54C48;
+}
+
+//Preset Styles
+@import "presets/preset.less";
