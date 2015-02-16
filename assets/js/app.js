@@ -39,7 +39,7 @@
             var panel = $(this).closest('.panel'),
                 totalPanel = $('#repeatable').find('.panel').length;
 
-            if (totalPanel != 1) {
+            if (totalPanel != 2) {
                 var result = confirm("Are Your sure");
                 if (result == true) {
                     panel.remove();
