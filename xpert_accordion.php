@@ -2,7 +2,7 @@
 /*
 Plugin Name: Xpert Accordion
 Plugin URI: http://themexpert.com/wordpress-plugins/xpert-accordion
-Version: 0.0.1
+Version: 1.0
 Author: ThemeXpert
 Authro URI : http://www.themexpert.com
 Description: Supercharge your WordPress accordion plugin
@@ -98,7 +98,7 @@ final class TX_XpertAccordion
 
 		wp_enqueue_style(
 			TX_PREFIX . '-app',
-			plugins_url('assets/css/app.css', __FILE__),
+			plugins_url('assets/css/app.min.css', __FILE__),
 			array()
 		);
 
@@ -116,7 +116,7 @@ final class TX_XpertAccordion
 
 		wp_enqueue_script(
 			TX_PREFIX .'-app',
-			plugins_url('assets/js/app.js', __FILE__),
+			plugins_url('assets/js/app.min.js', __FILE__),
 			array()
 		);
 	}
@@ -130,20 +130,19 @@ final class TX_XpertAccordion
 	public function loadSiteScripts()
 	{
 		$this->loadCommonScripts();
+
+		wp_enqueue_style(
+			TX_PREFIX . '-bs-accordion',
+			plugins_url('assets/css/accordion.min.css', __FILE__),
+			array()
+		);
+
+		wp_enqueue_script(
+			TX_PREFIX .'-app',
+			plugins_url('assets/js/accordion.min.js', __FILE__),
+			array()
+		);
 	}
 }
 // Kickstart the class
 new TX_XpertAccordion();
-
-//function tx_add_scripts()
-//{
-//	wp_enqueue_style('ms-bk-css', plugins_url('assets/css/ms_bkend_style.css', __FILE__) );
-//	// wp_enqueue_script('tx-bs-selectize', plugins_url('assets/vendor/selectize/js/standalone/selectize.js', __FILE__) );
-//
-//}
-//add_action('wp_enqueue_media', 'tx_add_scripts');
-//
-//function tx_add_frontend_scripts(){
-//	wp_enqueue_style('ms-fend-style', plugins_url('assets/css/ms_fend_style.css', __FILE__));
-//}
-//add_action( 'wp_enqueue_scripts', 'tx_add_frontend_scripts' );

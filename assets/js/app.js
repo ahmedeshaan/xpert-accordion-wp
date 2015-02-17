@@ -24,6 +24,7 @@
             // Now append it to parent div #repeatable
             $('#repeatable').append($template);
             $template.show(); // Show the item
+
             init($template);
         });
         // Trigger the action-new click event
@@ -84,6 +85,11 @@
             wp.media.editor.insert('[xa_acc style="' + $presets + '" ]' + $acc + '[/xa_acc]');
 
         });
+
+        if(!$('.panel-collapse').hasClass('in')) {
+                $('.panel-collapse').addClass('in');
+              
+            }
     });
 
 // Preset Style 

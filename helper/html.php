@@ -60,7 +60,7 @@ abstract class Html {
 
 	public static function getRepeatable()
 	{
-		$html = '<div id="repeatable" class="panel-group" role="tablist"><br>
+		$html = '<div id="repeatable" class="panel-group xa-default" role="tablist"><br>
 				<div class="panel panel-default clonable">
 					<div class="panel-heading" role="tab" id="collapseListGroupHeading1">
 						<h4 class="panel-title">

@@ -1136,7 +1136,7 @@ button.close {
 }
 .panel-heading .action-remove {
   font-size: 16px;
-  margin-top: 2px;
+  margin: -27px 15px 0px 0px;
   color: #D54C48;
 }
 .preset_select {
@@ -1146,6 +1146,12 @@ button.close {
   background: #d9edf7;
   color: #31708f;
   border-color: #bce8f1;
+  padding: 0px;
+}
+.xa-blue > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
 }
 .xa-blue > .panel-default {
   border-color: #bce8f1;
@@ -1160,6 +1166,12 @@ button.close {
   background: #dff0d8;
   color: #3c763d;
   border-color: #d6e9c6;
+  padding: 0px;
+}
+.xa-green > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
 }
 .xa-green > .panel-default {
   border-color: #d6e9c6;
@@ -1174,6 +1186,12 @@ button.close {
   color: #8a6d3b;
   background: #fcf8e3;
   border-color: #faebcc;
+  padding: 0px;
+}
+.xa-yellow > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
 }
 .xa-yellow > .panel-default {
   border-color: #faebcc;
@@ -1188,6 +1206,12 @@ button.close {
   color: #a94442;
   background: #f2dede;
   border-color: #ebccd1;
+  padding: 0px;
+}
+.xa-red > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
 }
 .xa-red > .panel-default {
   border-color: #ebccd1;
@@ -1209,7 +1233,7 @@ button.close {
   border-color: transparent;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #fff;
-  padding: 20px;
+  padding: 15px;
 }
 .xa-style1 .panel-body {
   background: #E2E2E5;
@@ -1217,6 +1241,17 @@ button.close {
 }
 .xa-style1 .panel-default > .panel-heading {
   background: #EFF0F4;
+}
+.xa-style1 > .panel > .panel-heading {
+  padding: 0px;
+}
+.xa-style1 > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+.xa-style1 > .panel > .panel-heading .action-remove {
+  margin: -34px 20px 0 0;
 }
 .xa-style2 .panel {
   margin: 0 !important;
@@ -1226,7 +1261,6 @@ button.close {
   border-color: transparent;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #fff;
-  padding: 20px;
 }
 .xa-style2 .panel-body {
   background: #556465;
@@ -1252,6 +1286,22 @@ button.close {
 .xa-style2 .panel-default > .panel-heading:first-child {
   border-top: 1px solid #eee;
 }
-/*.panel-heading .ms_title {
-	padding-left: 3px;
-}*/
+.xa-style2 > .panel > .panel-heading {
+  padding: 0px;
+}
+.xa-style2 > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 18px;
+}
+.xa-style2 > .panel > .panel-heading .action-remove {
+  margin: -34px 20px 0 0;
+}
+.xa-default > .panel > .panel-heading {
+  padding: 0px;
+}
+.xa-default > .panel > .panel-heading a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
