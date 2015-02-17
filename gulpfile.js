@@ -43,11 +43,12 @@ gulp.task('minifyjs', function(){
 });
 
 
+
 //Watch Task
 gulp.task('watch',function(){
 
-    gulp.watch('assets/js/**/*.js',['minifyjs']);
+    gulp.watch('assets/less/*.less',['minifyjs']);
     //livereload.listen();
 });
 
-gulp.task('default',['compile','minifycss']);
+gulp.task('default',['watch','minifyjs','minifycss']);

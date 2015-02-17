@@ -54,6 +54,10 @@
         $(document).on('keyup', '.title', function () {
             var newValue = $(this).val();
             $(this).closest('.panel').find('.panel-title > a  > .tx-title').text(newValue);
+            if(!(newValue.length) == 0 && ($(this).closest('.panel').hasClass('panel-danger'))){
+               $(this).closest('.panel').removeClass('panel-danger').addClass('panel-default');
+            }
+           // console.log($(this).closest('.panel'));
         });
 
         //___Start Icon change___//
@@ -71,18 +75,32 @@
 
         $(document).on('click', '.action-insert', function () {
             var $presets = $('.presets').val(),
-                $acc = $title = $content = $icon = '';
+                $acc = $title = $content = $icon = '',
+                $allIsWell = true;
 
             $('.panel').each(function () {
                 if (!$(this).hasClass("clonable")) {
-                    $title = $(this).find('.title').val(),
+                        $title = $(this).find('.title').val(),
                         $content = $(this).find('.content').val(),
                         $icon = $(this).find('.selectized').val();
+                       //  alert($content.length);
+                        if( ($title.length == 0) || ($content.length == 0))
+                        {
+                            $(this).removeClass('panel-default').addClass('panel-danger');
+                            $allIsWell = false;
 
-                    $acc += '[xa_slide title="' + $title + '" icon="' + $icon + '"]' + $content + '[/xa_slide]';
+                        }else {
+                            $(this).removeClass('panel-danger').addClass('panel-default ');
+                        }
+                        $acc += '[xa_slide title="' + $title + '" icon="' + $icon + '"]' + $content + '[/xa_slide]';
                 }
             });
-            wp.media.editor.insert('[xa_acc style="' + $presets + '" ]' + $acc + '[/xa_acc]');
+
+            if ( $allIsWell )
+            {
+                wp.media.editor.insert('[xa_acc style="' + $presets + '" ]' + $acc + '[/xa_acc]'); 
+                $('#xa-modal').modal('hide')
+            }
 
         });
 
@@ -94,16 +112,16 @@
 
 // Preset Style 
 
-$(document).on('change', '.presets', function(){		
+$(document).on('change', '.presets', function(){        
   
-	var newIcon = $('#repeatable').attr('class');
-	var newIconChange = $(this).val();
+    var newIcon = $('#repeatable').attr('class');
+    var newIconChange = $(this).val();
 
-	if(newIcon!==newIconChange){
+    if(newIcon!==newIconChange){
 
-	$(this).next('#repeatable').removeClass(newIcon);
-	$(this).next('#repeatable').addClass('panel-group ui-sortable ' + newIconChange);
-	}
+    $(this).next('#repeatable').removeClass(newIcon);
+    $(this).next('#repeatable').addClass('panel-group ui-sortable ' + newIconChange);
+    }
 
 });
 //___Admin Style Change___//

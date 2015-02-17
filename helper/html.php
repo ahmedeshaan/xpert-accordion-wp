@@ -4,7 +4,7 @@ abstract class Html {
 
 	public static function getMediaButtion()
 	{
-		$html = '<a href="#" id="xa-media" class="btn button" data-toggle="modal" data-target="#exampleModal">XpertAccordion</a>';
+		$html = '<a href="#" id="xa-media" class="btn button" data-toggle="modal" data-target="#xa-modal">XpertAccordion</a>';
 
 		return $html;
 	}
@@ -13,7 +13,7 @@ abstract class Html {
 	{
 		$html = array();
 
-		$html[] = '<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
+		$html[] = '<div class="modal fade" id="xa-modal" data-backdrop="static">';
 		$html[] = '<div class="modal-dialog">';
 		$html[] = '<div class="modal-content">';
 		$html[] = self::getModalHeader();
@@ -34,7 +34,7 @@ abstract class Html {
 	{
 		$html = '<div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="exampleModalLabel">Xpert Accordion</h4>
+			        <h4 class="modal-title" id="xa-modal-label">Xpert Accordion</h4>
 			      </div>';
 
 		return $html;
@@ -98,7 +98,7 @@ abstract class Html {
 	public static function getModalFooter()
 	{
 		$html = ' <div class="modal-footer">
-			        <button type="button" class="tx-btn tx-btn-primary pull-left action-insert" data-dismiss="modal">Insert</button>
+			        <button type="button" class="tx-btn tx-btn-primary pull-left action-insert">Insert</button>
 			        <button type="button" class="tx-btn tx-btn-danger" data-dismiss="modal">Close</button>
 			      </div>';
 	    return $html;

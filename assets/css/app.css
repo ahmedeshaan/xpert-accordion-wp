@@ -1123,6 +1123,9 @@ button.close {
   background-color: #c91032;
   color: #ffffff;
 }
+#repeatable .action-drag {
+  cursor: move;
+}
 .panel-heading .tx_draging {
   position: relative;
   left: -2px;
@@ -1138,6 +1141,7 @@ button.close {
   font-size: 16px;
   margin: -27px 15px 0px 0px;
   color: #D54C48;
+  cursor: pointer;
 }
 .preset_select {
   width: 30%;
